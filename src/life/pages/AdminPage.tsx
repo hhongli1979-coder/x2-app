@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { supabase, Post, PostStatus, CATEGORIES, REGIONS } from '../../lib/supabase';
+import { supabase, supabaseConfigured, Post, PostStatus, CATEGORIES, REGIONS } from '../../lib/supabase';
 import { Loader2, CheckCircle, XCircle, EyeOff, Trash2, Pin, LogOut, Globe } from 'lucide-react';
 
 const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD as string | undefined;
@@ -32,14 +32,20 @@ export const AdminPage: React.FC = () => {
 
   const fetchPosts = useCallback(async () => {
     setLoading(true);
-    let q = supabase
-      .from('posts')
-      .select('*')
-      .order('created_at', { ascending: false });
-    if (filter !== 'all') q = q.eq('status', filter);
-    const { data } = await q;
-    setPosts((data as Post[]) ?? []);
-    setLoading(false);
+    try {
+      if (!supabaseConfigured) throw new Error('数据库未配置，请联系管理员');
+      let q = supabase
+        .from('posts')
+        .select('*')
+        .order('created_at', { ascending: false });
+      if (filter !== 'all') q = q.eq('status', filter);
+      const { data } = await q;
+      setPosts((data as Post[]) ?? []);
+    } catch (e: any) {
+      setOpError(e.message ?? '加载失败');
+    } finally {
+      setLoading(false);
+    }
   }, [filter]);
 
   useEffect(() => {

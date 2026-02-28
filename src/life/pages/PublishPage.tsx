@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { supabase, CATEGORIES, REGIONS } from '../../lib/supabase';
+import { supabase, supabaseConfigured, CATEGORIES, REGIONS } from '../../lib/supabase';
 import { LifeNav } from '../components/LifeNav';
 import { Loader2, CheckCircle } from 'lucide-react';
 
@@ -25,22 +25,27 @@ export const PublishPage: React.FC = () => {
     }
     setSubmitting(true);
     setError(null);
-    const { error: err } = await supabase.from('posts').insert({
-      region,
-      category,
-      title: title.trim(),
-      content: content.trim(),
-      contact: contact.trim(),
-    });
-    setSubmitting(false);
-    if (err) {
-      // Map common errors to user-friendly Chinese messages
-      const msg = err.message?.includes('violates') 
-        ? '提交失败，请检查填写内容是否完整'
-        : `提交失败: ${err.message}`;
-      setError(msg);
-    } else {
-      setDone(true);
+    try {
+      if (!supabaseConfigured) throw new Error('数据库未配置，请联系管理员');
+      const { error: err } = await supabase.from('posts').insert({
+        region,
+        category,
+        title: title.trim(),
+        content: content.trim(),
+        contact: contact.trim(),
+      });
+      if (err) {
+        const msg = err.message?.includes('violates')
+          ? '提交失败，请检查填写内容是否完整'
+          : `提交失败: ${err.message}`;
+        setError(msg);
+      } else {
+        setDone(true);
+      }
+    } catch (e: any) {
+      setError(e.message ?? '提交失败');
+    } finally {
+      setSubmitting(false);
     }
   };
 
