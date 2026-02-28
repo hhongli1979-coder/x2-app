@@ -150,23 +150,22 @@ export default function App() {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'py-4 glass border-b-white/5' : 'py-8'}`}>
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center font-black text-xl shadow-lg shadow-cyan-500/20">
-              X²
+            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center font-black text-sm shadow-lg shadow-cyan-500/20 text-black">
+              华商
             </div>
             <div className="hidden sm:block">
               <div className="font-bold text-lg tracking-tight leading-none">{t.footer.brand}</div>
-              <div className="text-[10px] text-cyan-400 font-bold tracking-[0.2em] uppercase">Global Launch</div>
+              <div className="text-[10px] text-cyan-400 font-bold tracking-[0.2em] uppercase">Smart Ecosystem</div>
             </div>
           </div>
 
             <div className="hidden md:flex items-center gap-10">
-              <NavItem href="#home">{t.nav.home}</NavItem>
-              <NavItem href="#regions">{t.nav.regions}</NavItem>
-              <NavItem href="#ai-tech">{t.nav.tech}</NavItem>
-              <NavItem href="#ai">{t.nav.ai}</NavItem>
-              <NavItem href="#mexico">{t.nav.mexico}</NavItem>
+              <NavItem href="#ecosystem">{t.nav.ecosystem}</NavItem>
               <div className="flex items-center gap-4">
-                <button className="px-6 py-2.5 bg-white text-black text-sm font-bold rounded-full hover:bg-cyan-400 transition-colors">
+                <button 
+                  onClick={() => setShowAIDetail(true)}
+                  className="px-6 py-2.5 bg-white text-black text-sm font-bold rounded-full hover:bg-cyan-400 transition-colors"
+                >
                   {t.nav.consult}
                 </button>
                 <div className="text-[10px] font-black text-cyan-400 border border-cyan-400/30 px-2 py-1 rounded uppercase tracking-tighter">
@@ -194,12 +193,14 @@ export default function App() {
             className="fixed inset-0 z-40 bg-black pt-24 px-6 md:hidden"
           >
             <div className="flex flex-col gap-8">
-              <NavItem href="#home" onClick={() => setIsMenuOpen(false)}>{t.nav.home}</NavItem>
-              <NavItem href="#regions" onClick={() => setIsMenuOpen(false)}>{t.nav.regions}</NavItem>
-              <NavItem href="#ai-tech" onClick={() => setIsMenuOpen(false)}>{t.nav.tech}</NavItem>
-              <NavItem href="#ai" onClick={() => setIsMenuOpen(false)}>{t.nav.ai}</NavItem>
-              <NavItem href="#mexico" onClick={() => setIsMenuOpen(false)}>{t.nav.mexico}</NavItem>
-              <button className="w-full py-4 bg-cyan-500 text-black font-bold rounded-2xl">
+              <NavItem href="#ecosystem" onClick={() => setIsMenuOpen(false)}>{t.nav.ecosystem}</NavItem>
+              <button 
+                onClick={() => {
+                  setShowAIDetail(true);
+                  setIsMenuOpen(false);
+                }}
+                className="w-full py-4 bg-cyan-500 text-black font-bold rounded-2xl"
+              >
                 {t.nav.consult}
               </button>
             </div>
@@ -233,23 +234,23 @@ export default function App() {
 
             <div className="flex flex-wrap gap-4 mb-16">
               <div className="glass px-6 py-3 rounded-2xl flex items-center gap-3">
-                <Smartphone className="w-5 h-5 text-cyan-400" />
+                <MessageSquare className="w-5 h-5 text-cyan-400" />
+                <span className="text-sm font-medium">{t.hero.features.news}</span>
+              </div>
+              <div className="glass px-6 py-3 rounded-2xl flex items-center gap-3">
+                <User className="w-5 h-5 text-blue-400" />
+                <span className="text-sm font-medium">{t.hero.features.jobs}</span>
+              </div>
+              <div className="glass px-6 py-3 rounded-2xl flex items-center gap-3">
+                <Bot className="w-5 h-5 text-purple-400" />
                 <span className="text-sm font-medium">{t.hero.features.agent}</span>
-              </div>
-              <div className="glass px-6 py-3 rounded-2xl flex items-center gap-3">
-                <Wallet className="w-5 h-5 text-blue-400" />
-                <span className="text-sm font-medium">{t.hero.features.bank}</span>
-              </div>
-              <div className="glass px-6 py-3 rounded-2xl flex items-center gap-3">
-                <LayoutGrid className="w-5 h-5 text-purple-400" />
-                <span className="text-sm font-medium">{t.hero.features.shop}</span>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6">
               <button 
                 onClick={() => {
-                  const el = document.getElementById('regions');
+                  const el = document.getElementById('ecosystem');
                   el?.scrollIntoView({ behavior: 'smooth' });
                 }}
                 className="px-10 py-5 bg-cyan-500 text-black font-black rounded-2xl flex items-center justify-center gap-3 hover:scale-105 transition-transform"
@@ -267,196 +268,59 @@ export default function App() {
         </div>
       </section>
 
-      {/* Regions Section */}
-      <section id="regions" className="py-32 bg-zinc-950/50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-20">
-            <h2 className="text-4xl md:text-6xl font-black mb-6">{t.regions.title}</h2>
-            <p className="text-xl text-zinc-400 max-w-2xl">
-              {t.regions.desc}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <RegionCard 
-              icon={Globe}
-              title={t.regions.europe.title}
-              subtitle={t.regions.europe.subtitle}
-              description={t.regions.europe.desc}
-              features={t.regions.europe.features}
-              accentColor="cyan-400"
-            />
-            <RegionCard 
-              icon={Zap}
-              title={t.regions.indonesia.title}
-              subtitle={t.regions.indonesia.subtitle}
-              description={t.regions.indonesia.desc}
-              features={t.regions.indonesia.features}
-              accentColor="emerald-400"
-            />
-            <RegionCard 
-              icon={Rocket}
-              title={t.regions.mexico.title}
-              subtitle={t.regions.mexico.subtitle}
-              description={t.regions.mexico.desc}
-              features={t.regions.mexico.features}
-              accentColor="orange-400"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* AI Tech Section - Powered by Google Gemini */}
-      <section id="ai-tech" className="py-32 relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[500px] bg-cyan-500/5 blur-[120px] -z-10" />
-        
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
-            <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6">
-                <BrainCircuit className="w-3 h-3" />
-                {t.tech.badge}
-              </div>
-              <h2 className="text-4xl md:text-7xl font-black mb-6 leading-tight">
-                {t.tech.title} <br />
-                <span className="text-gradient">{t.tech.subtitle}</span>
-              </h2>
-            </div>
-            <p className="text-xl text-zinc-400 max-w-md pb-4">
-              {t.tech.desc}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {t.tech.cards.map((tech, i) => {
-              const icons = [Sparkles, Languages, Search, Database];
-              const colors = ["text-cyan-400", "text-blue-400", "text-purple-400", "text-emerald-400"];
-              const bgs = ["bg-cyan-400/10", "bg-blue-400/10", "bg-purple-400/10", "bg-emerald-400/10"];
-              const Icon = icons[i];
-              return (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                  viewport={{ once: true }}
-                  className="glass p-8 rounded-[2rem] hover:bg-white/5 transition-colors group"
-                >
-                  <div className={`w-12 h-12 rounded-xl ${bgs[i]} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                    <Icon className={`w-6 h-6 ${colors[i]}`} />
-                  </div>
-                  <h4 className="text-xl font-bold mb-3">{tech.title}</h4>
-                  <p className="text-sm text-zinc-500 leading-relaxed">
-                    {tech.desc}
-                  </p>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          {/* Interactive Tech Badge */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            className="mt-20 glass p-1 rounded-full inline-flex items-center gap-4 pr-8"
-          >
-            <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center">
-              <Cpu className="w-6 h-6 text-black" />
-            </div>
-            <div className="text-sm font-bold tracking-wide">
-              {t.tech.status}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* AI Assistant Section */}
-      <section id="ai" className="py-32">
+      {/* Ecosystem Section */}
+      <section id="ecosystem" className="py-32">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-black mb-6">{t.ai.title}</h2>
+            <h2 className="text-4xl md:text-6xl font-black mb-6">{t.ecosystem.title}</h2>
             <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-              {t.ai.desc}
+              {t.ecosystem.desc}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FeatureCard 
-              icon={Database}
-              title={t.ai.features[0].title}
-              description={t.ai.features[0].desc}
-              features={t.ai.features[0].items}
+              icon={MessageSquare}
+              title={t.ecosystem.news.title}
+              description={t.ecosystem.news.desc}
+              features={t.ecosystem.news.features}
               colorClass="cyan-400"
             />
             <FeatureCard 
-              icon={BrainCircuit}
-              title={t.ai.features[1].title}
-              description={t.ai.features[1].desc}
-              features={t.ai.features[1].items}
+              icon={User}
+              title={t.ecosystem.jobs.title}
+              description={t.ecosystem.jobs.desc}
+              features={t.ecosystem.jobs.features}
               colorClass="blue-400"
             />
             <FeatureCard 
-              icon={Sparkles}
-              title={t.ai.features[2].title}
-              description={t.ai.features[2].desc}
-              features={t.ai.features[2].items}
+              icon={Globe}
+              title={t.ecosystem.housing.title}
+              description={t.ecosystem.housing.desc}
+              features={t.ecosystem.housing.features}
               colorClass="purple-400"
             />
             <FeatureCard 
-              icon={Search}
-              title={t.ai.features[3].title}
-              description={t.ai.features[3].desc}
-              features={t.ai.features[3].items}
+              icon={BarChart3}
+              title={t.ecosystem.business.title}
+              description={t.ecosystem.business.desc}
+              features={t.ecosystem.business.features}
               colorClass="emerald-400"
             />
             <FeatureCard 
-              icon={Languages}
-              title={t.ai.features[4].title}
-              description={t.ai.features[4].desc}
-              features={t.ai.features[4].items}
+              icon={LayoutGrid}
+              title={t.ecosystem.market.title}
+              description={t.ecosystem.market.desc}
+              features={t.ecosystem.market.features}
               colorClass="orange-400"
             />
             <FeatureCard 
-              icon={Zap}
-              title={t.ai.features[5].title}
-              description={t.ai.features[5].desc}
-              features={t.ai.features[5].items}
+              icon={ShieldCheck}
+              title={t.ecosystem.services.title}
+              description={t.ecosystem.services.desc}
+              features={t.ecosystem.services.features}
               colorClass="rose-400"
             />
-          </div>
-        </div>
-      </section>
-
-      {/* Mexico Zones */}
-      <section id="mexico" className="py-32 bg-zinc-950/50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-20">
-            <h2 className="text-4xl md:text-6xl font-black mb-6">{t.mexico.title}</h2>
-            <p className="text-xl text-zinc-400 max-w-2xl">
-              {t.mexico.desc}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {t.mexico.zones.map((zone, idx) => (
-              <div key={idx} className="glass p-10 rounded-[2.5rem] border-orange-500/20">
-                <div className="inline-block px-4 py-1 rounded-full bg-orange-500/10 text-orange-400 text-xs font-bold mb-6">
-                  {zone.type}
-                </div>
-                <h3 className="text-3xl font-bold mb-4">{zone.name}</h3>
-                <p className="text-zinc-400 mb-8 leading-relaxed">{zone.desc}</p>
-                <div className="flex justify-between pt-8 border-t border-white/5">
-                  <div>
-                    <div className="text-2xl font-black text-orange-400">{zone.stats.count}</div>
-                    <div className="text-xs text-zinc-500 uppercase font-bold">{t.mexico.stats.companies}</div>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-black text-orange-400">{zone.stats.rate}</div>
-                    <div className="text-xs text-zinc-500 uppercase font-bold">{t.mexico.stats.coverage}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -467,7 +331,7 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
             <div className="col-span-1 md:col-span-1">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-8 h-8 bg-cyan-500 rounded-lg flex items-center justify-center font-black">X²</div>
+                <div className="w-8 h-8 bg-cyan-500 rounded-lg flex items-center justify-center font-black text-[10px] text-black">华商</div>
                 <span className="font-bold text-xl">{t.footer.brand}</span>
               </div>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
@@ -493,12 +357,12 @@ export default function App() {
             </div>
             
             <div>
-              <h4 className="font-bold mb-6 uppercase text-xs tracking-widest text-zinc-300">{t.nav.regions}</h4>
+              <h4 className="font-bold mb-6 uppercase text-xs tracking-widest text-zinc-300">{t.nav.ecosystem}</h4>
               <ul className="space-y-4 text-sm text-zinc-500">
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">{t.regions.europe.title}</a></li>
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">{t.regions.indonesia.title}</a></li>
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">{t.regions.mexico.title}</a></li>
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">{t.nav.ai}</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">{t.ecosystem.news.title}</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">{t.ecosystem.jobs.title}</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">{t.ecosystem.housing.title}</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">{t.ecosystem.market.title}</a></li>
               </ul>
             </div>
 
@@ -506,9 +370,8 @@ export default function App() {
               <h4 className="font-bold mb-6 uppercase text-xs tracking-widest text-zinc-300">{t.footer.ecosystem}</h4>
               <ul className="space-y-4 text-sm text-zinc-500">
                 <li><a href="#" className="hover:text-cyan-400 transition-colors">{t.footer.links.assistant}</a></li>
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">{t.footer.links.bank}</a></li>
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">{t.footer.links.shop}</a></li>
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">{t.footer.links.payment}</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">{t.ecosystem.services.title}</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">{t.ecosystem.business.title}</a></li>
               </ul>
             </div>
 
@@ -535,7 +398,7 @@ export default function App() {
 
           <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
             <p className="text-zinc-600 text-xs">
-              &copy; 2025 X²-Starlink Technologies Inc. {t.footer.rights}
+              &copy; 2025 华商智能本地生态网. {t.footer.rights}
             </p>
             <div className="flex gap-8 text-zinc-600 text-[10px] font-bold uppercase tracking-widest">
               <span>{t.footer.tags.usa}</span>
@@ -558,7 +421,7 @@ export default function App() {
             {/* Header */}
             <header className="glass py-4 px-6 flex items-center justify-between border-b border-white/10">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-cyan-500 rounded-xl flex items-center justify-center font-black text-black">X²</div>
+                <div className="w-10 h-10 bg-cyan-500 rounded-xl flex items-center justify-center font-black text-[10px] text-black">华商</div>
                 <div>
                   <div className="font-bold text-lg">{t.command.title}</div>
                   <div className="text-[10px] text-cyan-400 font-bold uppercase tracking-widest">{t.command.badge}</div>

@@ -4,394 +4,389 @@ export const translations = {
   zh: {
     nav: {
       home: '首页',
-      regions: '首发区域',
-      tech: 'AI技术',
-      ai: 'AI助手',
-      mexico: '墨西哥区',
+      ecosystem: '生态板块',
+      news: 'AI新闻',
+      jobs: 'AI招聘',
+      housing: 'AI房产',
+      business: '生意转让',
+      market: '二手市场',
+      services: '便民服务',
       consult: '立即咨询',
     },
     hero: {
-      badge: '全球首发 · 三大区域同步上线',
-      title: 'X²-星链',
-      subtitle: '数字生态系统',
-      desc: 'AI智能体助手进万家华企，赋能全球华人企业数字化升级。打破地域限制，重塑商业未来。',
+      badge: '全球华商 · AI智能本地生态网',
+      title: '华商智能',
+      subtitle: '本地生态网',
+      desc: '超越传统分类信息，打造全方位AI驱动的华商生态。整合新闻、招聘、房产与交易，赋能全球华人商业生活。',
       features: {
-        agent: 'AI智能体助手',
-        bank: '区块链智能银行',
-        shop: '免费AI开店',
+        agent: 'AI全能助手',
+        news: 'AI智能资讯',
+        jobs: 'AI精准匹配',
       },
       cta: {
-        explore: '探索首发区域',
-        experience: '体验AI助手',
+        explore: '进入生态系统',
+        experience: '对话AI助手',
       }
     },
-    regions: {
-      title: '全球首发区域',
-      desc: '我们精心选择三大战略区域，为全球华人企业提供本地化数字生态服务。',
-      europe: {
-        title: '欧洲区',
-        subtitle: '总部基地 · 合规先行',
-        desc: '以欧盟为核心，服务超过200万欧洲华人，提供符合GDPR标准的全方位数字服务。',
-        features: ['覆盖欧盟27国', '5种欧洲语言支持', '1000+合作商户', '24/7多语种客服'],
+    ecosystem: {
+      title: 'AI 赋能核心板块',
+      desc: '在传统分类信息基础上，通过AI深度学习提供智能化升级体验。',
+      news: {
+        title: 'AI 智能新闻',
+        desc: '实时抓取全球商业动态，AI自动翻译、摘要并分析对本地华商的具体影响。',
+        features: ['多语种实时翻译', '商业价值评估', '政策变动预警', '个性化资讯推送'],
       },
-      indonesia: {
-        title: '印尼区',
-        subtitle: '东南亚枢纽 · 快速增长',
-        desc: '服务东南亚最大的华人社区，为当地300万华人提供定制化的数字生活与商业服务。',
-        features: ['专注印尼华人市场', '本地支付系统整合', '500+本土商户合作', '伊斯兰金融合规'],
+      jobs: {
+        title: 'AI 智能招聘',
+        desc: '超越简单发布。AI匹配引擎根据技能与文化契合度，连接华商企业与顶尖人才。',
+        features: ['简历AI优化', '智能职位匹配', '跨境人才搜寻', '面试AI模拟'],
       },
-      mexico: {
-        title: '墨西哥区',
-        subtitle: '美洲新星 · 试运营启动',
-        desc: '开拓美洲市场，为墨西哥三大经济区的华人企业提供AI驱动的数字化解决方案。',
-        features: ['3个核心经济区覆盖', '西语+中文双语支持', '跨境贸易优化', '北美市场跳板'],
+      housing: {
+        title: 'AI 智能房产',
+        desc: 'AI自动评估房产价值，分析周边商业环境与治安，提供精准的租售建议。',
+        features: ['AI估值模型', '周边环境分析', '虚拟AI看房', '合同法律审核'],
+      },
+      business: {
+        title: 'AI 生意转让',
+        desc: '为餐馆、零售等华商生意提供AI估值与尽职调查辅助，确保交易安全透明。',
+        features: ['盈利能力预测', '行业风险评估', '买卖双方撮合', '转让流程指导'],
+      },
+      market: {
+        title: 'AI 二手市场',
+        desc: '图片识别自动发布，AI评估商品新旧与价值，智能过滤虚假信息。',
+        features: ['AI自动估值', '智能描述生成', '信任评分系统', '物流智能推荐'],
+      },
+      services: {
+        title: 'AI 便民服务',
+        desc: '集成翻译、法律、税务等AI助手，解决华商在海外生活的方方面面。',
+        features: ['AI法律咨询', '税务智能申报', '多语种翻译官', '本地办事指南'],
       }
-    },
-    tech: {
-      badge: 'Powered by Google Gemini 3.1 Pro',
-      title: '深度智能',
-      subtitle: '重塑商业逻辑',
-      desc: '基于谷歌最先进的 Gemini 3.1 Pro 模型，为华人企业提供具备“深度思考”能力的数字大脑。',
-      cards: [
-        { title: '高阶逻辑推理', desc: '启用 ThinkingLevel.HIGH，处理复杂的跨境贸易决策与多国合规分析。' },
-        { title: '全球语言中枢', desc: '原生支持中、英、西、印尼语，消除全球首发三大区域的沟通壁垒。' },
-        { title: '实时搜索增强', desc: '集成 Google Search Grounding，确保商业资讯、政策变动实时同步。' },
-        { title: '多模态数据处理', desc: '同时理解文档、图像与报表，实现企业数据的全方位智能化管理。' },
-      ],
-      status: '当前系统状态: Gemini 3.1 Pro (Thinking Mode: High)',
-    },
-    ai: {
-      title: 'AI智能体助手进万家华企',
-      desc: '专为华人企业打造的智能商业助手，让AI成为您的全天候商业伙伴。',
-      cards: [
-        { title: 'X²-多模态感知', desc: '基于谷歌原生多模态技术，能够同时理解文字、图片、音频及视频，全方位处理企业多源数据。', features: ['视觉图像识别', '音频语义理解', '视频内容分析', '多源数据融合'] },
-        { title: 'X²-海量记忆中枢', desc: '拥有业界领先的超长上下文理解能力，轻松处理百万字级别的企业文档、合同与历史交易数据。', features: ['200万Token超长记忆', '全量文档检索', '历史对话溯源', '复杂长文本摘要'] },
-        { title: 'X²-深度逻辑思维', desc: '内置高阶推理引擎，能够拆解复杂的商业逻辑，为企业提供具备深度的战略咨询与决策建议。', features: ['复杂任务拆解', '多步逻辑推理', '战略方案生成', '风险评估建模'] },
-        { title: 'X²-实时全球情报', desc: '集成实时联网检索功能，确保商业资讯、行业动态与政策变动秒级同步，决策永不落后。', features: ['全球政策监测', '实时竞品分析', '行业趋势追踪', '真实性事实核查'] },
-        { title: 'X²-原生全球语通', desc: '原生支持全球100多种语言，提供地道的翻译与跨文化沟通支持，彻底消除国际贸易壁垒。', features: ['多语种实时翻译', '跨文化语义对齐', '本地化表达优化', '方言与俚语识别'] },
-        { title: 'X²-自动化执行引擎', desc: '具备强大的工具调用能力，可无缝对接企业内部ERP、CRM等系统，实现从咨询到执行的闭环。', features: ['API自动化对接', '外部工具调用', '业务流程编排', '任务自动闭环'] },
-      ]
-    },
-    mexicoZones: {
-      title: '墨西哥三个试运营区',
-      desc: '我们选择墨西哥最具经济活力的三个区域，为当地华人企业提供精准的数字化服务。',
-      zones: [
-        { name: '墨西哥城', type: '首都经济区', desc: '墨西哥政治、经济、文化中心，集中了全国60%的华人企业总部。', stats: { count: '500+', rate: '85%', label: '华人企业', rateLabel: '覆盖率' } },
-        { name: '蒙特雷', type: '工业制造区', desc: '墨西哥工业之都，北美制造业中心。重点服务制造业、物流、供应链。', stats: { count: '300+', rate: '92%', label: '制造企业', rateLabel: '覆盖率' } },
-        { name: '瓜达拉哈拉', type: '科技创新区', desc: '墨西哥硅谷，科技与创新中心。专注服务科技、互联网、跨境电商。', stats: { count: '200+', rate: '88%', label: '科技企业', rateLabel: '覆盖率' } },
-      ]
     },
     footer: {
-      desc: 'AI智能体助手进万家华企\n全球华人企业数字化升级领导者',
-      sections: {
-        regions: '首发区域',
-        ecosystem: '服务生态',
-        contact: '联系我们',
+      brand: '华商智能',
+      slogan: 'AI智能体助手进万家华企 · 全球华人企业数字化升级领导者',
+      ecosystem: '服务生态',
+      contact: '联系我们',
+      address: '全球数字化运营中心',
+      rights: '保留所有权利',
+      links: {
+        assistant: 'AI 智能助手',
       },
-      copyright: '© 2024 X²-Starlink Technologies Inc. 保留所有权利。',
-      badges: ['美国特拉华州注册', '欧盟合规运营', '墨西哥试运营牌照'],
+      tags: {
+        usa: '美国合规',
+        eu: '欧盟标准',
+        mexico: '美洲覆盖',
+      }
+    },
+    command: {
+      title: '华商 AI 智能指挥中心',
+      badge: 'AI 驱动 · 全球导航',
+      welcomeTitle: '欢迎来到未来商业',
+      welcomeDesc: '华商智能 AI 助手不仅是一个对话工具，它是您的全球商务大脑。基于谷歌最先进的多模态大模型，我们为您提供全天候、跨语言、深逻辑的商业支持。',
+      agentRecruit: '生态合作伙伴招募中',
+      agentDesc: '加入华商智能全球生态，共同赋能千万华人企业。点击右侧对话框咨询合作详情。',
+      secure: '安全私密的 AI 咨询 · 华商智能生态系统',
     },
     chat: {
-      welcome: '您好！我是 X²-星链 全球商务助手。请问有什么可以帮您？无论是关于全球代理合作还是商务咨询，我都在这里为您解答。',
-      placeholder: '咨询全球代理或商务合作...',
+      welcome: '您好！我是 华商智能 官方 AI 导航员。请问有什么可以帮您？我可以为您导航到新闻、招聘、房产或生意转让等板块。',
+      placeholder: '咨询商业、招聘或房产信息...',
       thinking: '正在思考...',
-      error: '抱歉，由于咨询量较大，我的大脑暂时处理不过来。请稍后再试，或直接联系我们的商务团队。',
+      error: '抱歉，由于咨询量较大，我的大脑暂时处理不过来。请稍后再试。',
       header: {
-        title: 'X²-星链 商务助手',
-        status: 'Online · Global Support',
-      },
-      commandCenter: {
-        title: 'X²-AI 智能指挥中心',
-        welcomeTitle: '欢迎来到未来',
-        welcomeDesc: 'X²-星链 AI 助手不仅是一个对话工具，它是您的全球商务大脑。基于谷歌最先进的多模态大模型，我们为您提供全天候、跨语言、深逻辑的商业支持。',
-        agentRecruit: '代理商招募中',
-        agentDesc: '加入 X²-星链 全球生态，共同赋能千万华人企业。点击右侧对话框咨询代理详情。',
-        secure: 'Secure & Private AI Consultation · X²-Starlink Ecosystem',
+        title: '华商智能 AI 导航员',
+        status: '在线 · 全球支持',
       }
     }
   },
   en: {
     nav: {
       home: 'Home',
-      regions: 'Regions',
-      tech: 'AI Tech',
-      ai: 'AI Assistant',
-      mexico: 'Mexico',
+      ecosystem: 'Ecosystem',
+      news: 'AI News',
+      jobs: 'AI Jobs',
+      housing: 'AI Housing',
+      business: 'Business',
+      market: 'Market',
+      services: 'Services',
       consult: 'Consult Now',
     },
     hero: {
-      badge: 'Global Launch · Three Regions Online',
-      title: 'X²-Starlink',
-      subtitle: 'Digital Ecosystem',
-      desc: 'AI Agent Assistants for thousands of Chinese enterprises abroad, empowering global digital upgrades. Breaking boundaries, reshaping the future.',
+      badge: 'Global Chinese · AI Local Ecosystem',
+      title: 'Chinese Biz',
+      subtitle: 'Intelligence Net',
+      desc: 'Beyond traditional classifieds, building a full-scale AI-driven ecosystem. Integrating news, jobs, housing, and trading.',
       features: {
-        agent: 'AI Agent Assistant',
-        bank: 'Blockchain Smart Bank',
-        shop: 'Free AI E-shop',
+        agent: 'AI All-in-one',
+        news: 'AI Smart News',
+        jobs: 'AI Precision Match',
       },
       cta: {
-        explore: 'Explore Regions',
-        experience: 'Experience AI',
+        explore: 'Enter Ecosystem',
+        experience: 'Chat with AI',
       }
     },
-    regions: {
-      title: 'Global Launch Regions',
-      desc: 'We carefully selected three strategic regions to provide localized digital ecosystem services for global Chinese enterprises.',
-      europe: {
-        title: 'Europe',
-        subtitle: 'Headquarters · Compliance First',
-        desc: 'Centered in the EU, serving over 2 million Chinese in Europe with GDPR-compliant digital services.',
-        features: ['27 EU Countries', '5 European Languages', '1000+ Partners', '24/7 Support'],
+    ecosystem: {
+      title: 'AI Powered Core Modules',
+      desc: 'Upgrading traditional classifieds with deep learning for a smarter user experience.',
+      news: {
+        title: 'AI Smart News',
+        desc: 'Real-time global business dynamics, AI-translated and analyzed for local impact.',
+        features: ['Real-time Translation', 'Value Assessment', 'Policy Alerts', 'Personalized Feed'],
       },
-      indonesia: {
-        title: 'Indonesia',
-        subtitle: 'SEA Hub · Rapid Growth',
-        desc: 'Serving the largest Chinese community in SEA, providing customized digital life and business services for 3 million locals.',
-        features: ['Focus on ID Market', 'Local Payment Integration', '500+ Local Partners', 'Islamic Finance Compliant'],
+      jobs: {
+        title: 'AI Smart Jobs',
+        desc: 'AI matching engine based on skills and cultural fit, connecting firms with top talent.',
+        features: ['Resume AI Optimization', 'Smart Job Matching', 'Cross-border Search', 'AI Interview Prep'],
       },
-      mexico: {
-        title: 'Mexico',
-        subtitle: 'Americas Star · Trial Launch',
-        desc: 'Expanding into the Americas, providing AI-driven digital solutions for Chinese enterprises in three major economic zones.',
-        features: ['3 Core Economic Zones', 'ES+ZH Bilingual Support', 'Trade Optimization', 'Americas Springboard'],
+      housing: {
+        title: 'AI Smart Housing',
+        desc: 'AI-driven valuation and neighborhood analysis for precise rental and sales advice.',
+        features: ['AI Valuation', 'Environment Analysis', 'Virtual AI Tours', 'Legal Review'],
+      },
+      business: {
+        title: 'AI Biz Transfer',
+        desc: 'AI valuation and due diligence for restaurants and retail businesses.',
+        features: ['Profit Prediction', 'Risk Assessment', 'Buyer-Seller Match', 'Transfer Guidance'],
+      },
+      market: {
+        title: 'AI Market',
+        desc: 'Image-based auto-posting and AI valuation to filter fraud and ensure fair deals.',
+        features: ['AI Valuation', 'Smart Description', 'Trust Score', 'Logistics Sync'],
+      },
+      services: {
+        title: 'AI Services',
+        desc: 'Integrated AI assistants for legal, tax, and translation needs in daily life.',
+        features: ['AI Legal Advice', 'Smart Tax Filing', 'Multilingual Translator', 'Local Guide'],
       }
-    },
-    tech: {
-      badge: 'Powered by Google Gemini 3.1 Pro',
-      title: 'Deep Intelligence',
-      subtitle: 'Reshaping Business Logic',
-      desc: 'Based on Google\'s most advanced Gemini 3.1 Pro model, providing a digital brain with "Deep Thinking" capabilities.',
-      cards: [
-        { title: 'Advanced Logic', desc: 'Enabled ThinkingLevel.HIGH for complex trade decisions and multi-country compliance analysis.' },
-        { title: 'Global Language Hub', desc: 'Native support for ZH, EN, ES, ID, eliminating communication barriers in launch regions.' },
-        { title: 'Search Grounding', desc: 'Integrated Google Search Grounding for real-time sync of business news and policy changes.' },
-        { title: 'Multimodal Processing', desc: 'Understanding documents, images, and reports for comprehensive intelligent data management.' },
-      ],
-      status: 'Current Status: Gemini 3.1 Pro (Thinking Mode: High)',
-    },
-    ai: {
-      title: 'AI Agents for Global Enterprises',
-      desc: 'Intelligent business assistants built for Chinese enterprises, making AI your 24/7 business partner.',
-      cards: [
-        { title: 'X²-Multimodal Perception', desc: 'Based on Google native multimodal tech, understanding text, images, audio, and video.', features: ['Image Recognition', 'Audio Semantics', 'Video Analysis', 'Data Fusion'] },
-        { title: 'X²-Massive Memory', desc: 'Industry-leading context window, processing millions of words in documents and contracts.', features: ['2M Token Context', 'Full Document Search', 'History Tracing', 'Long Text Summary'] },
-        { title: 'X²-Deep Logic', desc: 'Built-in high-order reasoning engine, deconstructing complex business logic for strategic advice.', features: ['Task Deconstruction', 'Multi-step Reasoning', 'Strategy Generation', 'Risk Assessment'] },
-        { title: 'X²-Global Intelligence', desc: 'Integrated real-time search for second-level sync of business news and industry trends.', features: ['Policy Monitoring', 'Competitor Analysis', 'Trend Tracking', 'Fact Checking'] },
-        { title: 'X²-Native Global Voice', desc: 'Native support for 100+ languages, providing authentic translation and cross-cultural support.', features: ['Real-time Translation', 'Cultural Alignment', 'Local Expression', 'Dialect Recognition'] },
-        { title: 'X²-Automation Engine', desc: 'Powerful tool calling capabilities, seamlessly connecting to internal ERP and CRM systems.', features: ['API Integration', 'Tool Calling', 'Process Orchestration', 'Task Closure'] },
-      ]
-    },
-    mexicoZones: {
-      title: 'Mexico Trial Zones',
-      desc: 'We selected the three most economically vibrant regions in Mexico for precise digital services.',
-      zones: [
-        { name: 'Mexico City', type: 'Capital Economic Zone', desc: 'Political and economic center, home to 60% of Chinese enterprise HQs.', stats: { count: '500+', rate: '85%', label: 'Enterprises', rateLabel: 'Coverage' } },
-        { name: 'Monterrey', type: 'Industrial Zone', desc: 'Industrial capital, North American manufacturing hub. Focus on logistics and supply chain.', stats: { count: '300+', rate: '92%', label: 'Manufacturing', rateLabel: 'Coverage' } },
-        { name: 'Guadalajara', type: 'Tech Innovation Zone', desc: 'Mexican Silicon Valley, tech and innovation center. Focus on tech and e-commerce.', stats: { count: '200+', rate: '88%', label: 'Tech Firms', rateLabel: 'Coverage' } },
-      ]
     },
     footer: {
-      desc: 'AI Agents for Global Enterprises\nLeader in Digital Upgrades',
-      sections: {
-        regions: 'Regions',
-        ecosystem: 'Ecosystem',
-        contact: 'Contact Us',
+      brand: 'Huashang AI',
+      slogan: 'AI Agents for Global Chinese Enterprises · Leader in Digital Upgrades',
+      ecosystem: 'Ecosystem',
+      contact: 'Contact Us',
+      address: 'Global Digital Ops Center',
+      rights: 'All rights reserved',
+      links: {
+        assistant: 'AI Assistant',
       },
-      copyright: '© 2024 X²-Starlink Technologies Inc. All rights reserved.',
-      badges: ['Delaware Registered', 'EU Compliant', 'Mexico Trial License'],
+      tags: {
+        usa: 'USA Compliant',
+        eu: 'EU Standard',
+        mexico: 'Americas Coverage',
+      }
+    },
+    command: {
+      title: 'AI Command Center',
+      badge: 'AI Driven · Global Navigation',
+      welcomeTitle: 'Welcome to Future Business',
+      welcomeDesc: 'Huashang AI is not just a chat tool; it is your global business brain. Based on Google\'s advanced multimodal models.',
+      agentRecruit: 'Partners Wanted',
+      agentDesc: 'Join the Huashang AI ecosystem. Click the chat box to inquire about partnership details.',
+      secure: 'Secure & Private AI Consultation · Huashang AI Ecosystem',
     },
     chat: {
-      welcome: 'Hello! I am the X²-Starlink Global Business Assistant. How can I help you today? I am here for agent partnerships and business inquiries.',
-      placeholder: 'Inquire about global agents or business...',
+      welcome: 'Hello! I am the Huashang AI Navigator. How can I help you? I can guide you to News, Jobs, Housing, or Business sections.',
+      placeholder: 'Inquire about business, jobs, or housing...',
       thinking: 'Thinking...',
-      error: 'Sorry, due to high volume, my brain is a bit overloaded. Please try again later or contact our team.',
+      error: 'Sorry, due to high volume, my brain is overloaded. Please try again later.',
       header: {
-        title: 'X²-Starlink Assistant',
+        title: 'Huashang AI Navigator',
         status: 'Online · Global Support',
-      },
-      commandCenter: {
-        title: 'X²-AI Command Center',
-        welcomeTitle: 'Welcome to the Future',
-        welcomeDesc: 'X²-Starlink AI is not just a chat tool; it is your global business brain. Based on Google\'s advanced multimodal models.',
-        agentRecruit: 'Agents Wanted',
-        agentDesc: 'Join the X²-Starlink ecosystem. Click the chat box to inquire about agent details.',
-        secure: 'Secure & Private AI Consultation · X²-Starlink Ecosystem',
       }
     }
   },
   es: {
     nav: {
       home: 'Inicio',
-      regions: 'Regiones',
-      tech: 'Tecnología AI',
-      ai: 'Asistente AI',
-      mexico: 'México',
+      ecosystem: 'Ecosistema',
+      news: 'Noticias AI',
+      jobs: 'Empleos AI',
+      housing: 'Vivienda AI',
+      business: 'Negocios',
+      market: 'Mercado',
+      services: 'Servicios',
       consult: 'Consultar Ahora',
     },
     hero: {
-      badge: 'Lanzamiento Global · Tres Regiones en Línea',
-      title: 'X²-Starlink',
-      subtitle: 'Ecosistema Digital',
-      desc: 'Asistentes de agentes de IA para miles de empresas chinas en el extranjero, potenciando las actualizaciones digitales globales.',
+      badge: 'Chinos Globales · Ecosistema Local AI',
+      title: 'Huashang',
+      subtitle: 'Red Inteligente',
+      desc: 'Más allá de los clasificados tradicionales, construyendo un ecosistema completo impulsado por IA. Integrando noticias, empleos, vivienda y comercio.',
       features: {
-        agent: 'Asistente de Agente IA',
-        bank: 'Banco Inteligente Blockchain',
-        shop: 'Tienda IA Gratis',
+        agent: 'IA Todo-en-uno',
+        news: 'Noticias Inteligentes',
+        jobs: 'Emparejamiento Preciso',
       },
       cta: {
-        explore: 'Explorar Regiones',
-        experience: 'Probar IA',
+        explore: 'Entrar al Ecosistema',
+        experience: 'Chat con IA',
       }
     },
-    // ... Simplified for brevity in this turn, but I will implement full versions for the user
-    regions: {
-      title: 'Regiones de Lanzamiento Global',
-      desc: 'Seleccionamos cuidadosamente tres regiones estratégicas para proporcionar servicios de ecosistema digital localizados.',
-      europe: { title: 'Europa', subtitle: 'Sede · Cumplimiento Primero', desc: 'Centrado en la UE, sirviendo a más de 2 millones de chinos en Europa.', features: ['27 Países UE', '5 Idiomas Europeos', '1000+ Socios', 'Soporte 24/7'] },
-      indonesia: { title: 'Indonesia', subtitle: 'Hub SEA · Crecimiento Rápido', desc: 'Sirviendo a la comunidad china más grande de SEA.', features: ['Mercado ID', 'Pago Local', '500+ Socios', 'Cumplimiento Financiero'] },
-      mexico: { title: 'México', subtitle: 'Estrella de América · Lanzamiento de Prueba', desc: 'Expandiendo en las Américas, soluciones IA para empresas chinas.', features: ['3 Zonas Económicas', 'Soporte Bilingüe', 'Optimización Comercial', 'Trampolín Américas'] },
-    },
-    tech: {
-      badge: 'Potenciado por Google Gemini 3.1 Pro',
-      title: 'Inteligencia Profunda',
-      subtitle: 'Redefiniendo la Lógica Empresarial',
-      desc: 'Basado en el modelo Gemini 3.1 Pro más avanzado de Google.',
-      cards: [
-        { title: 'Lógica Avanzada', desc: 'ThinkingLevel.HIGH habilitado para decisiones comerciales complejas.' },
-        { title: 'Hub de Idiomas Global', desc: 'Soporte nativo para ZH, EN, ES, ID.' },
-        { title: 'Búsqueda en Tiempo Real', desc: 'Google Search Grounding integrado.' },
-        { title: 'Procesamiento Multimodal', desc: 'Comprensión de documentos, imágenes y reportes.' },
-      ],
-      status: 'Estado: Gemini 3.1 Pro (Modo Pensamiento: Alto)',
-    },
-    ai: {
-      title: 'Agentes de IA para Empresas Globales',
-      desc: 'Asistentes de negocios inteligentes, haciendo de la IA su socio comercial 24/7.',
-      cards: [
-        { title: 'X²-Percepción Multimodal', desc: 'Entendiendo texto, imágenes, audio y video.', features: ['Reconocimiento Imagen', 'Semántica Audio', 'Análisis Video', 'Fusión de Datos'] },
-        { title: 'X²-Memoria Masiva', desc: 'Procesando millones de palabras en documentos.', features: ['Contexto 2M Tokens', 'Búsqueda Documentos', 'Rastreo Histórico', 'Resumen de Texto'] },
-        { title: 'X²-Lógica Profunda', desc: 'Motor de razonamiento de alto orden.', features: ['Descomposición Tareas', 'Razonamiento Pasos', 'Generación Estrategia', 'Evaluación Riesgos'] },
-        { title: 'X²-Inteligencia Global', desc: 'Búsqueda integrada en tiempo real.', features: ['Monitoreo Políticas', 'Análisis Competencia', 'Rastreo Tendencias', 'Verificación Hechos'] },
-        { title: 'X²-Voz Global Nativa', desc: 'Soporte nativo para más de 100 idiomas.', features: ['Traducción Real', 'Alineación Cultural', 'Expresión Local', 'Reconocimiento Dialectos'] },
-        { title: 'X²-Motor de Automatización', desc: 'Capacidades de llamada a herramientas.', features: ['Integración API', 'Llamada Herramientas', 'Orquestación Procesos', 'Cierre Tareas'] },
-      ]
-    },
-    mexicoZones: {
-      title: 'Zonas de Prueba en México',
-      desc: 'Seleccionamos las tres regiones económicamente más vibrantes de México.',
-      zones: [
-        { name: 'Ciudad de México', type: 'Zona Económica Capital', desc: 'Centro político y económico.', stats: { count: '500+', rate: '85%', label: 'Empresas', rateLabel: 'Cobertura' } },
-        { name: 'Monterrey', type: 'Zona Industrial', desc: 'Capital industrial, hub de manufactura.', stats: { count: '300+', rate: '92%', label: 'Manufactura', rateLabel: 'Cobertura' } },
-        { name: 'Guadalajara', type: 'Zona de Innovación', desc: 'Silicon Valley mexicano.', stats: { count: '200+', rate: '88%', label: 'Empresas Tech', rateLabel: 'Cobertura' } },
-      ]
+    ecosystem: {
+      title: 'Módulos Principales con IA',
+      desc: 'Actualizando los clasificados tradicionales con aprendizaje profundo para una experiencia de usuario más inteligente.',
+      news: {
+        title: 'Noticias Inteligentes AI',
+        desc: 'Dinámica empresarial global en tiempo real, traducida y analizada por IA para impacto local.',
+        features: ['Traducción en Tiempo Real', 'Evaluación de Valor', 'Alertas de Política', 'Feed Personalizado'],
+      },
+      jobs: {
+        title: 'Empleos Inteligentes AI',
+        desc: 'Motor de emparejamiento de IA basado en habilidades y ajuste cultural, conectando empresas con talento.',
+        features: ['Optimización de CV con IA', 'Emparejamiento Inteligente', 'Búsqueda Transfronteriza', 'Simulación de Entrevistas'],
+      },
+      housing: {
+        title: 'Vivienda Inteligente AI',
+        desc: 'Valoración impulsada por IA y análisis de vecindario para consejos precisos de alquiler y venta.',
+        features: ['Valoración IA', 'Análisis de Entorno', 'Tours Virtuales IA', 'Revisión Legal'],
+      },
+      business: {
+        title: 'Transferencia de Negocios AI',
+        desc: 'Valoración de IA y debida diligencia para restaurantes y negocios minoristas.',
+        features: ['Predicción de Ganancias', 'Evaluación de Riesgos', 'Emparejamiento Comprador-Vendedor', 'Guía de Transferencia'],
+      },
+      market: {
+        title: 'Mercado AI',
+        desc: 'Publicación automática basada en imágenes y valoración de IA para filtrar fraudes.',
+        features: ['Valoración IA', 'Descripción Inteligente', 'Puntuación de Confianza', 'Sincronización Logística'],
+      },
+      services: {
+        title: 'Servicios AI',
+        desc: 'Asistentes de IA integrados para necesidades legales, fiscales y de traducción en la vida diaria.',
+        features: ['Asesoría Legal IA', 'Declaración de Impuestos', 'Traductor Multilingüe', 'Guía Local'],
+      }
     },
     footer: {
-      desc: 'Agentes de IA para Empresas Globales\nLíder en Actualizaciones Digitales',
-      sections: { regions: 'Regiones', ecosystem: 'Ecosistema', contact: 'Contacto' },
-      copyright: '© 2024 X²-Starlink Technologies Inc. Todos los derechos reservados.',
-      badges: ['Registrado en Delaware', 'Cumplimiento UE', 'Licencia Prueba México'],
+      brand: 'Huashang AI',
+      slogan: 'Agentes de IA para Empresas Chinas Globales · Líder en Actualizaciones Digitales',
+      ecosystem: 'Ecosistema',
+      contact: 'Contáctenos',
+      address: 'Centro Global de Operaciones Digitales',
+      rights: 'Todos los derechos reservados',
+      links: {
+        assistant: 'Asistente AI',
+      },
+      tags: {
+        usa: 'Cumplimiento EEUU',
+        eu: 'Estándar UE',
+        mexico: 'Cobertura Américas',
+      }
+    },
+    command: {
+      title: 'Centro de Comando AI',
+      badge: 'Impulsado por IA · Navegación Global',
+      welcomeTitle: 'Bienvenido al Negocio del Futuro',
+      welcomeDesc: 'Huashang AI no es solo una herramienta de chat; es su cerebro de negocios global.',
+      agentRecruit: 'Se Buscan Socios',
+      agentDesc: 'Únete al ecosistema Huashang AI. Haz clic en el cuadro de chat para consultar detalles.',
+      secure: 'Consulta de IA Segura y Privada · Ecosistema Huashang AI',
     },
     chat: {
-      welcome: '¡Hola! Soy el Asistente de Negocios Globales de X²-Starlink. ¿Cómo puedo ayudarte hoy?',
-      placeholder: 'Consultar sobre agentes o negocios...',
+      welcome: '¡Hola! Soy el Navegador AI de Huashang. ¿Cómo puedo ayudarte? Puedo guiarte a las secciones de Noticias, Empleos, Vivienda o Negocios.',
+      placeholder: 'Consultar sobre negocios, empleos o vivienda...',
       thinking: 'Pensando...',
-      error: 'Lo siento, debido al alto volumen, mi cerebro está un poco sobrecargado.',
-      header: { title: 'Asistente X²-Starlink', status: 'En línea · Soporte Global' },
-      commandCenter: {
-        title: 'Centro de Comando X²-AI',
-        welcomeTitle: 'Bienvenido al Futuro',
-        welcomeDesc: 'X²-Starlink AI no es solo una herramienta de chat; es su cerebro de negocios global.',
-        agentRecruit: 'Agentes Buscados',
-        agentDesc: 'Únete al ecosistema X²-Starlink.',
-        secure: 'Consulta de IA Segura y Privada · Ecosistema X²-Starlink',
+      error: 'Lo siento, debido al alto volumen, mi cerebro está sobrecargado. Por favor, inténtelo de nuevo más tarde.',
+      header: {
+        title: 'Navegador AI Huashang',
+        status: 'En línea · Soporte Global',
       }
     }
   },
   id: {
     nav: {
       home: 'Beranda',
-      regions: 'Wilayah',
-      tech: 'Teknologi AI',
-      ai: 'Asisten AI',
-      mexico: 'Meksiko',
+      ecosystem: 'Ekosistem',
+      news: 'Berita AI',
+      jobs: 'Lowongan AI',
+      housing: 'Properti AI',
+      business: 'Bisnis',
+      market: 'Pasar',
+      services: 'Layanan',
       consult: 'Konsultasi Sekarang',
     },
     hero: {
-      badge: 'Peluncuran Global · Tiga Wilayah Online',
-      title: 'X²-Starlink',
-      subtitle: 'Ekosistem Digital',
-      desc: 'Asisten Agen AI untuk ribuan perusahaan Tiongkok di luar negeri, memberdayakan peningkatan digital global.',
+      badge: 'Tionghoa Global · Ekosistem Lokal AI',
+      title: 'Huashang',
+      subtitle: 'Jaringan Cerdas',
+      desc: 'Melampaui iklan baris tradisional, membangun ekosistem berbasis AI yang lengkap. Mengintegrasikan berita, lowongan, properti, dan perdagangan.',
       features: {
-        agent: 'Asisten Agen AI',
-        bank: 'Bank Cerdas Blockchain',
-        shop: 'Toko AI Gratis',
+        agent: 'AI Serba Bisa',
+        news: 'Berita Cerdas',
+        jobs: 'Pencocokan Presisi',
       },
       cta: {
-        explore: 'Jelajahi Wilayah',
-        experience: 'Coba AI',
+        explore: 'Masuk ke Ekosistem',
+        experience: 'Chat dengan AI',
       }
     },
-    regions: {
-      title: 'Wilayah Peluncuran Global',
-      desc: 'Kami memilih tiga wilayah strategis untuk menyediakan layanan ekosistem digital lokal.',
-      europe: { title: 'Eropa', subtitle: 'Kantor Pusat · Kepatuhan Utama', desc: 'Berpusat di UE, melayani lebih dari 2 juta orang Tionghoa di Eropa.', features: ['27 Negara UE', '5 Bahasa Eropa', '1000+ Mitra', 'Dukungan 24/7'] },
-      indonesia: { title: 'Indonesia', subtitle: 'Hub SEA · Pertumbuhan Cepat', desc: 'Melayani komunitas Tionghoa terbesar di SEA.', features: ['Fokus Pasar ID', 'Integrasi Pembayaran', '500+ Mitra Lokal', 'Kepatuhan Keuangan'] },
-      mexico: { title: 'Meksiko', subtitle: 'Bintang Amerika · Peluncuran Uji Coba', desc: 'Berekspansi ke Amerika, solusi AI untuk perusahaan Tionghoa.', features: ['3 Zona Ekonomi Inti', 'Dukungan Bilingual', 'Optimasi Perdagangan', 'Batu Loncatan Amerika'] },
-    },
-    tech: {
-      badge: 'Didukung oleh Google Gemini 3.1 Pro',
-      title: 'Kecerdasan Mendalam',
-      subtitle: 'Membentuk Kembali Logika Bisnis',
-      desc: 'Berdasarkan model Gemini 3.1 Pro tercanggih dari Google.',
-      cards: [
-        { title: 'Logika Lanjutan', desc: 'ThinkingLevel.HIGH diaktifkan untuk keputusan perdagangan yang kompleks.' },
-        { title: 'Pusat Bahasa Global', desc: 'Dukungan asli untuk ZH, EN, ES, ID.' },
-        { title: 'Pencarian Real-time', desc: 'Integrasi Google Search Grounding.' },
-        { title: 'Pemrosesan Multimodal', desc: 'Memahami dokumen, gambar, dan laporan.' },
-      ],
-      status: 'Status: Gemini 3.1 Pro (Mode Berpikir: Tinggi)',
-    },
-    ai: {
-      title: 'Agen AI untuk Perusahaan Global',
-      desc: 'Asisten bisnis cerdas, menjadikan AI mitra bisnis 24/7 Anda.',
-      cards: [
-        { title: 'X²-Persepsi Multimodal', desc: 'Memahami teks, gambar, audio, dan video.', features: ['Pengenalan Gambar', 'Semantik Audio', 'Analisis Video', 'Fusi Data'] },
-        { title: 'X²-Memori Masif', desc: 'Memproses jutaan kata dalam dokumen dan kontrak.', features: ['Konteks 2M Token', 'Pencarian Dokumen', 'Pelacakan Riwayat', 'Ringkasan Teks'] },
-        { title: 'X²-Logika Mendalam', desc: 'Mesin penalaran tingkat tinggi.', features: ['Dekonstruksi Tugas', 'Penalaran Multi-langkah', 'Generasi Strategi', 'Penilaian Risiko'] },
-        { title: 'X²-Intelijen Global', desc: 'Pencarian real-time terintegrasi.', features: ['Pemantauan Kebijakan', 'Analisis Pesaing', 'Pelacakan Tren', 'Pemeriksaan Fakta'] },
-        { title: 'X²-Suara Global Asli', desc: 'Dukungan asli untuk 100+ bahasa.', features: ['Terjemahan Real-time', 'Penyelarasan Budaya', 'Ekspresi Lokal', 'Pengenalan Dialek'] },
-        { title: 'X²-Mesin Otomatisasi', desc: 'Kemampuan pemanggilan alat yang kuat.', features: ['Integrasi API', 'Pemanggilan Alat', 'Orkestrasi Proses', 'Penutupan Tugas'] },
-      ]
-    },
-    mexicoZones: {
-      title: 'Zona Uji Coba Meksiko',
-      desc: 'Kami memilih tiga wilayah yang paling dinamis secara ekonomi di Meksiko.',
-      zones: [
-        { name: 'Mexico City', type: 'Zona Ekonomi Ibu Kota', desc: 'Pusat politik dan ekonomi.', stats: { count: '500+', rate: '85%', label: 'Perusahaan', rateLabel: 'Cakupan' } },
-        { name: 'Monterrey', type: 'Zona Industri', desc: 'Ibu kota industri, hub manufaktur.', stats: { count: '300+', rate: '92%', label: 'Manufaktur', rateLabel: 'Cakupan' } },
-        { name: 'Guadalajara', type: 'Zona Inovasi Teknologi', desc: 'Silicon Valley Meksiko.', stats: { count: '200+', rate: '88%', label: 'Perusahaan Tech', rateLabel: 'Cakupan' } },
-      ]
+    ecosystem: {
+      title: 'Modul Utama Berbasis AI',
+      desc: 'Meningkatkan iklan baris tradisional dengan pembelajaran mendalam untuk pengalaman pengguna yang lebih cerdas.',
+      news: {
+        title: 'Berita Cerdas AI',
+        desc: 'Dinamika bisnis global real-time, diterjemahkan dan dianalisis oleh AI untuk dampak lokal.',
+        features: ['Terjemahan Real-time', 'Penilaian Nilai', 'Peringatan Kebijakan', 'Feed Personal'],
+      },
+      jobs: {
+        title: 'Lowongan Cerdas AI',
+        desc: 'Mesin pencocokan AI berdasarkan keterampilan dan kesesuaian budaya, menghubungkan perusahaan dengan talenta.',
+        features: ['Optimasi CV AI', 'Pencocokan Cerdas', 'Pencarian Lintas Batas', 'Simulasi Wawancara'],
+      },
+      housing: {
+        title: 'Properti Cerdas AI',
+        desc: 'Valuasi berbasis AI and analisis lingkungan untuk saran sewa dan jual yang presisi.',
+        features: ['Valuasi AI', 'Analisis Lingkungan', 'Tur Virtual AI', 'Tinjauan Hukum'],
+      },
+      business: {
+        title: 'Transfer Bisnis AI',
+        desc: 'Valuasi AI dan uji tuntas untuk restoran dan bisnis ritel.',
+        features: ['Prediksi Laba', 'Penilaian Risiko', 'Pencocokan Pembeli-Penjual', 'Panduan Transfer'],
+      },
+      market: {
+        title: 'Pasar AI',
+        desc: 'Posting otomatis berbasis gambar dan valuasi AI untuk menyaring penipuan.',
+        features: ['Valuasi AI', 'Deskripsi Cerdas', 'Skor Kepercayaan', 'Sinkronisasi Logistik'],
+      },
+      services: {
+        title: 'Layanan AI',
+        desc: 'Asisten AI terintegrasi untuk kebutuhan hukum, pajak, dan terjemahan dalam kehidupan sehari-hari.',
+        features: ['Saran Hukum AI', 'Pelaporan Pajak', 'Penerjemah Multibahasa', 'Panduan Lokal'],
+      }
     },
     footer: {
-      desc: 'Agen AI untuk Perusahaan Global\nPemimpin dalam Peningkatan Digital',
-      sections: { regions: 'Wilayah', ecosystem: 'Ekosistem', contact: 'Hubungi Kami' },
-      copyright: '© 2024 X²-Starlink Technologies Inc. Hak cipta dilindungi undang-undang.',
-      badges: ['Terdaftar di Delaware', 'Kepatuhan UE', 'Lisensi Uji Coba Meksiko'],
+      brand: 'Huashang AI',
+      slogan: 'Agen AI untuk Perusahaan Tionghoa Global · Pemimpin dalam Peningkatan Digital',
+      ecosystem: 'Ekosistem',
+      contact: 'Hubungi Kami',
+      address: 'Pusat Operasi Digital Global',
+      rights: 'Hak cipta dilindungi undang-undang',
+      links: {
+        assistant: 'Asisten AI',
+      },
+      tags: {
+        usa: 'Kepatuhan AS',
+        eu: 'Standar UE',
+        mexico: 'Cakupan Amerika',
+      }
+    },
+    command: {
+      title: 'Pusat Komando AI',
+      badge: 'Berbasis AI · Navigasi Global',
+      welcomeTitle: 'Selamat Datang di Bisnis Masa Depan',
+      welcomeDesc: 'Huashang AI bukan sekadar alat obrolan; ini adalah otak bisnis global Anda.',
+      agentRecruit: 'Dicari Mitra',
+      agentDesc: 'Bergabunglah dengan ekosistem Huashang AI. Klik kotak obrolan untuk menanyakan detail kemitraan.',
+      secure: 'Konsultasi AI Aman & Pribadi · Ekosistem Huashang AI',
     },
     chat: {
-      welcome: 'Halo! Saya Asisten Bisnis Global X²-Starlink. Ada yang bisa saya bantu hari ini?',
-      placeholder: 'Tanya tentang agen atau bisnis...',
+      welcome: 'Halo! Saya Navigator AI Huashang. Ada yang bisa saya bantu? Saya dapat memandu Anda ke bagian Berita, Lowongan, Properti, atau Bisnis.',
+      placeholder: 'Tanya tentang bisnis, lowongan, atau properti...',
       thinking: 'Berpikir...',
-      error: 'Maaf, karena volume tinggi, otak saya agak kewalahan.',
-      header: { title: 'Asisten X²-Starlink', status: 'Online · Dukungan Global' },
-      commandCenter: {
-        title: 'Pusat Komando X²-AI',
-        welcomeTitle: 'Selamat Datang di Masa Depan',
-        welcomeDesc: 'X²-Starlink AI bukan sekadar alat obrolan; ini adalah otak bisnis global Anda.',
-        agentRecruit: 'Dicari Agen',
-        agentDesc: 'Bergabunglah dengan ekosistem X²-Starlink.',
-        secure: 'Konsultasi AI Aman & Pribadi · Ekosistem X²-Starlink',
+      error: 'Maaf, karena volume tinggi, otak saya kewalahan. Silakan coba lagi nanti.',
+      header: {
+        title: 'Navigator AI Huashang',
+        status: 'Online · Dukungan Global',
       }
     }
-  }
+  },
 };
