@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { useNavigate } from 'react-router-dom';
 import { 
   Globe, 
   Cpu, 
@@ -101,6 +102,7 @@ const RegionCard = ({ icon: Icon, title, subtitle, description, features, accent
 
 export default function App() {
   const { t, lang } = useTranslation();
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -161,6 +163,7 @@ export default function App() {
 
             <div className="hidden md:flex items-center gap-10">
               <NavItem href="#ecosystem">{t.nav.ecosystem}</NavItem>
+              <a href="/life" className="text-sm font-medium text-zinc-400 hover:text-cyan-400 transition-colors uppercase tracking-wider">生活网站</a>
               <div className="flex items-center gap-4">
                 <button 
                   onClick={() => setShowAIDetail(true)}
@@ -262,6 +265,12 @@ export default function App() {
                 className="px-10 py-5 glass font-bold rounded-2xl flex items-center justify-center gap-3 hover:bg-white/10 transition-colors"
               >
                 {t.hero.cta.experience}
+              </button>
+              <button
+                onClick={() => navigate('/life')}
+                className="px-10 py-5 glass font-bold rounded-2xl flex items-center justify-center gap-3 hover:bg-white/10 transition-colors border-cyan-500/30"
+              >
+                🏘️ 生活网站
               </button>
             </div>
           </motion.div>
