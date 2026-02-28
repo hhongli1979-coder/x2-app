@@ -26,13 +26,16 @@ const SYSTEM_INSTRUCTION = `
 `;
 
 export class GeminiService {
-  private ai: GoogleGenAI;
-  private chat: any;
+  private ai: GoogleGenAI | null;
+  private chat: any | null;
 
   constructor() {
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) {
-      throw new Error("GEMINI_API_KEY is not set");
+      console.warn("GEMINI_API_KEY is not set – AI chat features are disabled.");
+      this.ai = null;
+      this.chat = null;
+      return;
     }
     this.ai = new GoogleGenAI({ apiKey });
     this.chat = this.ai.chats.create({
@@ -47,6 +50,9 @@ export class GeminiService {
   }
 
   async sendMessage(message: string) {
+    if (!this.chat) {
+      return "AI 助手功能暂未启用，请联系管理员配置 API 密钥。";
+    }
     try {
       const response = await this.chat.sendMessage({ message });
       return response.text;
