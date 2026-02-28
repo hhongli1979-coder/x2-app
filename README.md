@@ -60,3 +60,48 @@ Placeholder SVG icons are provided in `public/`:
 
 Replace these files with production-quality PNG/WebP artwork when ready.
 
+---
+
+## 生活网站 (Life Platform)
+
+X²-星链数字生态系统 includes a community classifieds platform ("生活网站") with region-based browsing (Europe 欧洲区 / Indonesia 印尼区), categories (租房, 二手, 招聘, 生活服务, 交友), post submission, and admin moderation. It is accessible at `/life`.
+
+### Supabase Setup
+
+1. **Create a project** at [supabase.com](https://supabase.com).
+
+2. **Copy the project URL and anon key** from **Project Settings → API**.
+
+3. **Create a `.env.local`** file (gitignored) and add:
+   ```
+   VITE_SUPABASE_URL=https://YOUR_PROJECT.supabase.co
+   VITE_SUPABASE_ANON_KEY=YOUR_ANON_KEY
+   VITE_ADMIN_PASSWORD=choose_a_strong_password
+   ```
+
+4. **Run the schema migration** in the [Supabase SQL Editor](https://supabase.com/dashboard/project/_/sql):
+   - Open `supabase/migrations/001_init.sql` and paste the content into the editor, then click **Run**.
+
+5. **Seed initial data** (optional – categories are hardcoded in the frontend):
+   ```sql
+   -- Add yourself as admin (replace with your Supabase auth user UUID)
+   INSERT INTO public.admins (user_id) VALUES ('YOUR_USER_UUID');
+   ```
+
+### Routes
+
+| Path | Description |
+|------|-------------|
+| `/life` | Region selector (欧洲区 / 印尼区) |
+| `/life/eu` | Europe region – post feed + search |
+| `/life/id` | Indonesia region – post feed + search |
+| `/life/:region/publish` | Submit a new post (pending moderation) |
+| `/life/:region/post/:id` | Post detail page |
+| `/life/admin` | Admin moderation panel (approve / reject / pin / delete) |
+
+### Moderation Flow
+
+1. A user submits a post → saved with `status = 'pending'`.
+2. Admin visits `/life/admin`, enters the password, and approves/rejects the post.
+3. Only `approved` posts appear in the public feed.
+
