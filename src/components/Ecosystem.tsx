@@ -303,6 +303,83 @@ export const Ecosystem: React.FC<EcosystemProps> = ({ t, onBack, chatHistory, on
             </div>
           </div>
         );
+      case 'local':
+        return (
+          <div className="space-y-8">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500" />
+              <input
+                type="text"
+                placeholder={t.ecosystem.local.searchPlaceholder}
+                className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-12 pr-4 text-sm focus:outline-none focus:border-emerald-500/50"
+              />
+            </div>
+            <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+              {t.ecosystem.local.categories.map((cat: string, i: number) => (
+                <button
+                  key={i}
+                  className={`px-5 py-2 rounded-full text-sm font-bold whitespace-nowrap transition-colors ${i === 0 ? 'bg-emerald-500 text-black' : 'glass text-zinc-400 hover:bg-white/10'}`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+            <div>
+              <h4 className="font-bold mb-6 flex items-center gap-2">
+                <TrendingUp className="w-4 h-4 text-emerald-400" /> {t.ecosystem.local.popular}
+              </h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  { name: '华记川菜馆', type: '川菜 · 中餐', rating: '4.9', distance: '0.3km', deliveryTime: '25min', minOrder: '$15', img: 'restaurant1', tag: t.ecosystem.local.delivery },
+                  { name: 'Dragon Palace', type: '粤菜 · 中餐', rating: '4.8', distance: '0.6km', deliveryTime: '30min', minOrder: '$20', img: 'restaurant2', tag: t.ecosystem.local.delivery },
+                  { name: '越南河粉专卖', type: '越南菜', rating: '4.7', distance: '1.2km', deliveryTime: '35min', minOrder: '$12', img: 'restaurant3', tag: t.ecosystem.local.delivery },
+                  { name: 'Mexican Fusion', type: '墨西哥菜', rating: '4.6', distance: '0.8km', deliveryTime: '20min', minOrder: '$18', img: 'restaurant4', tag: t.ecosystem.local.orderNow },
+                  { name: '华人超市生鲜', type: '超市 · 生鲜', rating: '4.8', distance: '0.4km', deliveryTime: '40min', minOrder: '$30', img: 'grocery1', tag: t.ecosystem.local.delivery },
+                  { name: '到家保洁服务', type: '家政服务', rating: '4.9', distance: t.ecosystem.local.notApplicable, deliveryTime: t.ecosystem.local.byAppointment, minOrder: '$40', img: 'service1', tag: t.ecosystem.local.orderNow },
+                ].map((merchant, i) => (
+                  <motion.div
+                    key={i}
+                    whileHover={{ y: -4 }}
+                    className="glass rounded-[2rem] overflow-hidden group cursor-pointer"
+                  >
+                    <div className="aspect-video bg-zinc-900 relative overflow-hidden">
+                      <img
+                        src={`https://picsum.photos/seed/${merchant.img}/600/400`}
+                        alt={merchant.name}
+                        className="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-500"
+                        referrerPolicy="no-referrer"
+                      />
+                      <div className="absolute top-4 left-4">
+                        <span className="px-3 py-1 bg-emerald-500 text-black text-[10px] font-black rounded-full uppercase tracking-wider">
+                          {merchant.tag}
+                        </span>
+                      </div>
+                      <div className="absolute top-4 right-4 flex items-center gap-1 bg-black/60 backdrop-blur-md px-2 py-1 rounded-full">
+                        <Star className="w-3 h-3 text-yellow-400 fill-yellow-400" />
+                        <span className="text-xs font-bold text-white">{merchant.rating}</span>
+                      </div>
+                    </div>
+                    <div className="p-5">
+                      <h3 className="font-bold text-base mb-1 group-hover:text-emerald-400 transition-colors">{merchant.name}</h3>
+                      <p className="text-xs text-zinc-500 mb-3">{merchant.type}</p>
+                      <div className="flex items-center justify-between text-xs text-zinc-500">
+                        <div className="flex items-center gap-3">
+                          <span className="flex items-center gap-1">
+                            <MapPin className="w-3 h-3 text-emerald-400" /> {merchant.distance}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <Clock className="w-3 h-3 text-cyan-400" /> {merchant.deliveryTime}
+                          </span>
+                        </div>
+                        <span className="text-emerald-400 font-bold">{t.ecosystem.local.minPrice} {merchant.minOrder}</span>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        );
       case 'jobs':
         return (
           <div className="max-w-4xl mx-auto space-y-8">

@@ -30,16 +30,54 @@ export const translations = {
     },
     ecosystem: {
       title: 'AI 赋能核心板块',
+      subtitle: '一站式华商数字生态，覆盖生活与商业的每一个环节',
       desc: '在传统分类信息基础上，通过AI深度学习提供智能化升级体验。',
+      back: '返回',
+      modules: {
+        payment: { title: '华商支付', desc: '安全快捷的跨境支付与资产管理' },
+        entertainment: { title: '华商娱乐', desc: '视频、直播与短视频内容平台' },
+        news: { title: 'AI 智能新闻', desc: '全球华商资讯，AI实时分析' },
+        local: { title: '本地生活', desc: '餐饮、外卖、到家服务一站搞定' },
+        secondhand: { title: 'AI 二手市场', desc: 'AI估值，安全闲置交易平台' },
+        jobs: { title: 'AI 智能招聘', desc: 'AI精准匹配华商企业与人才' },
+        store: { title: '华商商城', desc: '正品好货，全球华商专属购物' },
+        ai: { title: 'AI 智能助手', desc: '全能商业大脑，随时为您解答' },
+      },
+      wallet: {
+        balance: '账户余额',
+        send: '转账',
+        receive: '收款',
+        assets: '资产组合',
+        history: '交易记录',
+      },
+      market: {
+        search: '搜索二手商品...',
+        categories: ['全部分类', '电子产品', '家具家电', '服装箱包', '其他'],
+        sell: '我要出售',
+      },
+      jobs: {
+        search: '搜索职位或公司...',
+        post: '发布职位',
+        hot: '热门职位',
+      },
+      local: {
+        categories: ['全部', '餐厅', '外卖', '到家服务', '超市便利', '美容美发'],
+        nearby: '附近推荐',
+        orderNow: '立即预订',
+        delivery: '外卖配送',
+        rating: '评分',
+        distance: '距离',
+        minPrice: '起送价',
+        deliveryTime: '配送时间',
+        popular: '热门商家',
+        searchPlaceholder: '搜索餐厅、外卖、服务...',
+        byAppointment: '预约制',
+        notApplicable: '–',
+      },
       news: {
         title: 'AI 智能新闻',
         desc: '实时抓取全球商业动态，AI自动翻译、摘要并分析对本地华商的具体影响。',
         features: ['多语种实时翻译', '商业价值评估', '政策变动预警', '个性化资讯推送'],
-      },
-      jobs: {
-        title: 'AI 智能招聘',
-        desc: '超越简单发布。AI匹配引擎根据技能与文化契合度，连接华商企业与顶尖人才。',
-        features: ['简历AI优化', '智能职位匹配', '跨境人才搜寻', '面试AI模拟'],
       },
       housing: {
         title: 'AI 智能房产',
@@ -50,11 +88,6 @@ export const translations = {
         title: 'AI 生意转让',
         desc: '为餐馆、零售等华商生意提供AI估值与尽职调查辅助，确保交易安全透明。',
         features: ['盈利能力预测', '行业风险评估', '买卖双方撮合', '转让流程指导'],
-      },
-      market: {
-        title: 'AI 二手市场',
-        desc: '图片识别自动发布，AI评估商品新旧与价值，智能过滤虚假信息。',
-        features: ['AI自动估值', '智能描述生成', '信任评分系统', '物流智能推荐'],
       },
       services: {
         title: 'AI 便民服务',
@@ -81,21 +114,27 @@ export const translations = {
     command: {
       title: '华商 AI 智能指挥中心',
       badge: 'AI 驱动 · 全球导航',
-      welcomeTitle: '欢迎来到未来商业',
-      welcomeDesc: '华商智能 AI 助手不仅是一个对话工具，它是您的全球商务大脑。基于谷歌最先进的多模态大模型，我们为您提供全天候、跨语言、深逻辑的商业支持。',
-      agentRecruit: '生态合作伙伴招募中',
-      agentDesc: '加入华商智能全球生态，共同赋能千万华人企业。点击右侧对话框咨询合作详情。',
-      secure: '安全私密的 AI 咨询 · 华商智能生态系统',
+      welcome: '欢迎来到未来商业',
+      desc: '华商智能 AI 助手不仅是一个对话工具，它是您的全球商务大脑。基于谷歌最先进的多模态大模型，我们为您提供全天候、跨语言、深逻辑的商业支持。',
+      features: [
+        { title: '实时数据整合', desc: '聚合全球华商市场数据，提供最新商业洞察' },
+        { title: '深度商业分析', desc: '利用AI深度学习，剖析行业趋势与机遇' },
+        { title: '多语言无障碍', desc: '中英西印四语无缝切换，跨文化沟通零障碍' },
+        { title: '全球生态搜索', desc: '一键搜索生态内新闻、职位、房产和商机' },
+      ],
+      recruiting: {
+        title: '生态合作伙伴招募中',
+        desc: '加入华商智能全球生态，共同赋能千万华人企业。点击右侧对话框咨询合作详情。',
+      },
+      footer: '安全私密的 AI 咨询 · 华商智能生态系统',
     },
     chat: {
       welcome: '您好！我是 华商智能 官方 AI 导航员。请问有什么可以帮您？我可以为您导航到新闻、招聘、房产或生意转让等板块。',
       placeholder: '咨询商业、招聘或房产信息...',
       thinking: '正在思考...',
       error: '抱歉，由于咨询量较大，我的大脑暂时处理不过来。请稍后再试。',
-      header: {
-        title: '华商智能 AI 导航员',
-        status: '在线 · 全球支持',
-      }
+      title: '华商智能 AI 导航员',
+      status: '在线 · 全球支持',
     }
   },
   en: {
@@ -127,16 +166,54 @@ export const translations = {
     },
     ecosystem: {
       title: 'AI Powered Core Modules',
+      subtitle: 'All-in-one digital ecosystem covering every aspect of life and business',
       desc: 'Upgrading traditional classifieds with deep learning for a smarter user experience.',
+      back: 'Back',
+      modules: {
+        payment: { title: 'Payments', desc: 'Secure cross-border payments and asset management' },
+        entertainment: { title: 'Entertainment', desc: 'Videos, live streams, and short-form content' },
+        news: { title: 'AI Smart News', desc: 'Global Chinese business news, AI-analyzed in real time' },
+        local: { title: 'Local Life', desc: 'Dining, delivery, and home services all in one place' },
+        secondhand: { title: 'AI Secondhand', desc: 'AI-valued, secure secondhand marketplace' },
+        jobs: { title: 'AI Smart Jobs', desc: 'AI precision matching for Chinese businesses and talent' },
+        store: { title: 'Mall', desc: 'Authentic products, exclusive Chinese business shopping' },
+        ai: { title: 'AI Assistant', desc: 'All-purpose business brain, always ready to help' },
+      },
+      wallet: {
+        balance: 'Balance',
+        send: 'Send',
+        receive: 'Receive',
+        assets: 'Portfolio',
+        history: 'Transactions',
+      },
+      market: {
+        search: 'Search secondhand items...',
+        categories: ['All', 'Electronics', 'Furniture', 'Fashion', 'Other'],
+        sell: 'Sell Now',
+      },
+      jobs: {
+        search: 'Search jobs or companies...',
+        post: 'Post a Job',
+        hot: 'Hot Jobs',
+      },
+      local: {
+        categories: ['All', 'Restaurants', 'Delivery', 'Home Services', 'Grocery', 'Beauty'],
+        nearby: 'Nearby Picks',
+        orderNow: 'Book Now',
+        delivery: 'Food Delivery',
+        rating: 'Rating',
+        distance: 'Distance',
+        minPrice: 'Min. Order',
+        deliveryTime: 'Delivery Time',
+        popular: 'Popular',
+        searchPlaceholder: 'Search restaurants, delivery, services...',
+        byAppointment: 'By Appt.',
+        notApplicable: 'N/A',
+      },
       news: {
         title: 'AI Smart News',
         desc: 'Real-time global business dynamics, AI-translated and analyzed for local impact.',
         features: ['Real-time Translation', 'Value Assessment', 'Policy Alerts', 'Personalized Feed'],
-      },
-      jobs: {
-        title: 'AI Smart Jobs',
-        desc: 'AI matching engine based on skills and cultural fit, connecting firms with top talent.',
-        features: ['Resume AI Optimization', 'Smart Job Matching', 'Cross-border Search', 'AI Interview Prep'],
       },
       housing: {
         title: 'AI Smart Housing',
@@ -147,11 +224,6 @@ export const translations = {
         title: 'AI Biz Transfer',
         desc: 'AI valuation and due diligence for restaurants and retail businesses.',
         features: ['Profit Prediction', 'Risk Assessment', 'Buyer-Seller Match', 'Transfer Guidance'],
-      },
-      market: {
-        title: 'AI Market',
-        desc: 'Image-based auto-posting and AI valuation to filter fraud and ensure fair deals.',
-        features: ['AI Valuation', 'Smart Description', 'Trust Score', 'Logistics Sync'],
       },
       services: {
         title: 'AI Services',
@@ -178,21 +250,27 @@ export const translations = {
     command: {
       title: 'AI Command Center',
       badge: 'AI Driven · Global Navigation',
-      welcomeTitle: 'Welcome to Future Business',
-      welcomeDesc: 'Huashang AI is not just a chat tool; it is your global business brain. Based on Google\'s advanced multimodal models.',
-      agentRecruit: 'Partners Wanted',
-      agentDesc: 'Join the Huashang AI ecosystem. Click the chat box to inquire about partnership details.',
-      secure: 'Secure & Private AI Consultation · Huashang AI Ecosystem',
+      welcome: 'Welcome to Future Business',
+      desc: "Huashang AI is not just a chat tool; it is your global business brain. Based on Google's advanced multimodal models, we provide round-the-clock, multilingual, deep-logic business support.",
+      features: [
+        { title: 'Real-time Data', desc: 'Aggregating global Chinese market data for the latest business insights' },
+        { title: 'Deep Analysis', desc: 'Using AI deep learning to analyze industry trends and opportunities' },
+        { title: 'Multilingual', desc: 'Seamless switching between Chinese, English, Spanish, and Indonesian' },
+        { title: 'Global Search', desc: 'One-click search for news, jobs, housing, and opportunities in the ecosystem' },
+      ],
+      recruiting: {
+        title: 'Partners Wanted',
+        desc: 'Join the Huashang AI ecosystem. Click the chat box to inquire about partnership details.',
+      },
+      footer: 'Secure & Private AI Consultation · Huashang AI Ecosystem',
     },
     chat: {
       welcome: 'Hello! I am the Huashang AI Navigator. How can I help you? I can guide you to News, Jobs, Housing, or Business sections.',
       placeholder: 'Inquire about business, jobs, or housing...',
       thinking: 'Thinking...',
       error: 'Sorry, due to high volume, my brain is overloaded. Please try again later.',
-      header: {
-        title: 'Huashang AI Navigator',
-        status: 'Online · Global Support',
-      }
+      title: 'Huashang AI Navigator',
+      status: 'Online · Global Support',
     }
   },
   es: {
@@ -224,16 +302,54 @@ export const translations = {
     },
     ecosystem: {
       title: 'Módulos Principales con IA',
+      subtitle: 'Ecosistema digital integral que cubre cada aspecto de la vida y los negocios',
       desc: 'Actualizando los clasificados tradicionales con aprendizaje profundo para una experiencia de usuario más inteligente.',
+      back: 'Volver',
+      modules: {
+        payment: { title: 'Pagos', desc: 'Pagos transfronterizos seguros y gestión de activos' },
+        entertainment: { title: 'Entretenimiento', desc: 'Videos, transmisiones en vivo y contenido corto' },
+        news: { title: 'Noticias AI', desc: 'Noticias empresariales chinas globales, analizadas por IA' },
+        local: { title: 'Vida Local', desc: 'Restaurantes, delivery y servicios a domicilio en un solo lugar' },
+        secondhand: { title: 'Mercado de Segunda Mano', desc: 'Mercado seguro con valoración por IA' },
+        jobs: { title: 'Empleos AI', desc: 'Emparejamiento preciso por IA para empresas y talentos' },
+        store: { title: 'Tienda', desc: 'Productos auténticos, compras exclusivas para empresas chinas' },
+        ai: { title: 'Asistente AI', desc: 'Cerebro empresarial integral, siempre listo para ayudar' },
+      },
+      wallet: {
+        balance: 'Saldo',
+        send: 'Enviar',
+        receive: 'Recibir',
+        assets: 'Portafolio',
+        history: 'Transacciones',
+      },
+      market: {
+        search: 'Buscar artículos de segunda mano...',
+        categories: ['Todo', 'Electrónica', 'Muebles', 'Moda', 'Otro'],
+        sell: 'Vender Ahora',
+      },
+      jobs: {
+        search: 'Buscar empleos o empresas...',
+        post: 'Publicar Empleo',
+        hot: 'Empleos Destacados',
+      },
+      local: {
+        categories: ['Todo', 'Restaurantes', 'Delivery', 'Servicios a Domicilio', 'Supermercado', 'Belleza'],
+        nearby: 'Recomendados Cercanos',
+        orderNow: 'Reservar Ahora',
+        delivery: 'Entrega de Comida',
+        rating: 'Calificación',
+        distance: 'Distancia',
+        minPrice: 'Pedido mínimo',
+        deliveryTime: 'Tiempo de entrega',
+        popular: 'Popular',
+        searchPlaceholder: 'Buscar restaurantes, delivery, servicios...',
+        byAppointment: 'Con cita',
+        notApplicable: 'N/D',
+      },
       news: {
         title: 'Noticias Inteligentes AI',
         desc: 'Dinámica empresarial global en tiempo real, traducida y analizada por IA para impacto local.',
         features: ['Traducción en Tiempo Real', 'Evaluación de Valor', 'Alertas de Política', 'Feed Personalizado'],
-      },
-      jobs: {
-        title: 'Empleos Inteligentes AI',
-        desc: 'Motor de emparejamiento de IA basado en habilidades y ajuste cultural, conectando empresas con talento.',
-        features: ['Optimización de CV con IA', 'Emparejamiento Inteligente', 'Búsqueda Transfronteriza', 'Simulación de Entrevistas'],
       },
       housing: {
         title: 'Vivienda Inteligente AI',
@@ -244,11 +360,6 @@ export const translations = {
         title: 'Transferencia de Negocios AI',
         desc: 'Valoración de IA y debida diligencia para restaurantes y negocios minoristas.',
         features: ['Predicción de Ganancias', 'Evaluación de Riesgos', 'Emparejamiento Comprador-Vendedor', 'Guía de Transferencia'],
-      },
-      market: {
-        title: 'Mercado AI',
-        desc: 'Publicación automática basada en imágenes y valoración de IA para filtrar fraudes.',
-        features: ['Valoración IA', 'Descripción Inteligente', 'Puntuación de Confianza', 'Sincronización Logística'],
       },
       services: {
         title: 'Servicios AI',
@@ -275,21 +386,27 @@ export const translations = {
     command: {
       title: 'Centro de Comando AI',
       badge: 'Impulsado por IA · Navegación Global',
-      welcomeTitle: 'Bienvenido al Negocio del Futuro',
-      welcomeDesc: 'Huashang AI no es solo una herramienta de chat; es su cerebro de negocios global.',
-      agentRecruit: 'Se Buscan Socios',
-      agentDesc: 'Únete al ecosistema Huashang AI. Haz clic en el cuadro de chat para consultar detalles.',
-      secure: 'Consulta de IA Segura y Privada · Ecosistema Huashang AI',
+      welcome: 'Bienvenido al Negocio del Futuro',
+      desc: 'Huashang AI no es solo una herramienta de chat; es su cerebro de negocios global. Basado en los modelos multimodales avanzados de Google.',
+      features: [
+        { title: 'Datos en Tiempo Real', desc: 'Agregando datos del mercado chino global para los últimos insights empresariales' },
+        { title: 'Análisis Profundo', desc: 'Usando IA de aprendizaje profundo para analizar tendencias y oportunidades' },
+        { title: 'Multilingüe', desc: 'Cambio fluido entre chino, inglés, español e indonesio' },
+        { title: 'Búsqueda Global', desc: 'Búsqueda con un clic de noticias, empleos, vivienda y oportunidades' },
+      ],
+      recruiting: {
+        title: 'Se Buscan Socios',
+        desc: 'Únete al ecosistema Huashang AI. Haz clic en el cuadro de chat para consultar detalles.',
+      },
+      footer: 'Consulta de IA Segura y Privada · Ecosistema Huashang AI',
     },
     chat: {
       welcome: '¡Hola! Soy el Navegador AI de Huashang. ¿Cómo puedo ayudarte? Puedo guiarte a las secciones de Noticias, Empleos, Vivienda o Negocios.',
       placeholder: 'Consultar sobre negocios, empleos o vivienda...',
       thinking: 'Pensando...',
       error: 'Lo siento, debido al alto volumen, mi cerebro está sobrecargado. Por favor, inténtelo de nuevo más tarde.',
-      header: {
-        title: 'Navegador AI Huashang',
-        status: 'En línea · Soporte Global',
-      }
+      title: 'Navegador AI Huashang',
+      status: 'En línea · Soporte Global',
     }
   },
   id: {
@@ -321,16 +438,54 @@ export const translations = {
     },
     ecosystem: {
       title: 'Modul Utama Berbasis AI',
+      subtitle: 'Ekosistem digital terpadu yang mencakup setiap aspek kehidupan dan bisnis',
       desc: 'Meningkatkan iklan baris tradisional dengan pembelajaran mendalam untuk pengalaman pengguna yang lebih cerdas.',
+      back: 'Kembali',
+      modules: {
+        payment: { title: 'Pembayaran', desc: 'Pembayaran lintas batas yang aman dan manajemen aset' },
+        entertainment: { title: 'Hiburan', desc: 'Video, siaran langsung, dan konten pendek' },
+        news: { title: 'Berita Cerdas AI', desc: 'Berita bisnis Tionghoa global, dianalisis AI secara real-time' },
+        local: { title: 'Kehidupan Lokal', desc: 'Makan, pesan antar, dan layanan rumah dalam satu tempat' },
+        secondhand: { title: 'Pasar Bekas AI', desc: 'Marketplace barang bekas aman dengan valuasi AI' },
+        jobs: { title: 'Lowongan Cerdas AI', desc: 'Pencocokan presisi AI untuk perusahaan dan talenta' },
+        store: { title: 'Toko', desc: 'Produk otentik, belanja eksklusif untuk bisnis Tionghoa' },
+        ai: { title: 'Asisten AI', desc: 'Otak bisnis serba bisa, selalu siap membantu' },
+      },
+      wallet: {
+        balance: 'Saldo',
+        send: 'Kirim',
+        receive: 'Terima',
+        assets: 'Portofolio',
+        history: 'Transaksi',
+      },
+      market: {
+        search: 'Cari barang bekas...',
+        categories: ['Semua', 'Elektronik', 'Furnitur', 'Fashion', 'Lainnya'],
+        sell: 'Jual Sekarang',
+      },
+      jobs: {
+        search: 'Cari lowongan atau perusahaan...',
+        post: 'Pasang Lowongan',
+        hot: 'Lowongan Populer',
+      },
+      local: {
+        categories: ['Semua', 'Restoran', 'Pesan Antar', 'Layanan Rumah', 'Supermarket', 'Kecantikan'],
+        nearby: 'Rekomendasi Terdekat',
+        orderNow: 'Pesan Sekarang',
+        delivery: 'Antar Makanan',
+        rating: 'Rating',
+        distance: 'Jarak',
+        minPrice: 'Min. Pesanan',
+        deliveryTime: 'Waktu Antar',
+        popular: 'Populer',
+        searchPlaceholder: 'Cari restoran, pesan antar, layanan...',
+        byAppointment: 'Dengan janji',
+        notApplicable: 'N/A',
+      },
       news: {
         title: 'Berita Cerdas AI',
         desc: 'Dinamika bisnis global real-time, diterjemahkan dan dianalisis oleh AI untuk dampak lokal.',
         features: ['Terjemahan Real-time', 'Penilaian Nilai', 'Peringatan Kebijakan', 'Feed Personal'],
-      },
-      jobs: {
-        title: 'Lowongan Cerdas AI',
-        desc: 'Mesin pencocokan AI berdasarkan keterampilan dan kesesuaian budaya, menghubungkan perusahaan dengan talenta.',
-        features: ['Optimasi CV AI', 'Pencocokan Cerdas', 'Pencarian Lintas Batas', 'Simulasi Wawancara'],
       },
       housing: {
         title: 'Properti Cerdas AI',
@@ -341,11 +496,6 @@ export const translations = {
         title: 'Transfer Bisnis AI',
         desc: 'Valuasi AI dan uji tuntas untuk restoran dan bisnis ritel.',
         features: ['Prediksi Laba', 'Penilaian Risiko', 'Pencocokan Pembeli-Penjual', 'Panduan Transfer'],
-      },
-      market: {
-        title: 'Pasar AI',
-        desc: 'Posting otomatis berbasis gambar dan valuasi AI untuk menyaring penipuan.',
-        features: ['Valuasi AI', 'Deskripsi Cerdas', 'Skor Kepercayaan', 'Sinkronisasi Logistik'],
       },
       services: {
         title: 'Layanan AI',
@@ -372,21 +522,27 @@ export const translations = {
     command: {
       title: 'Pusat Komando AI',
       badge: 'Berbasis AI · Navigasi Global',
-      welcomeTitle: 'Selamat Datang di Bisnis Masa Depan',
-      welcomeDesc: 'Huashang AI bukan sekadar alat obrolan; ini adalah otak bisnis global Anda.',
-      agentRecruit: 'Dicari Mitra',
-      agentDesc: 'Bergabunglah dengan ekosistem Huashang AI. Klik kotak obrolan untuk menanyakan detail kemitraan.',
-      secure: 'Konsultasi AI Aman & Pribadi · Ekosistem Huashang AI',
+      welcome: 'Selamat Datang di Bisnis Masa Depan',
+      desc: 'Huashang AI bukan sekadar alat obrolan; ini adalah otak bisnis global Anda. Berdasarkan model multimodal canggih Google.',
+      features: [
+        { title: 'Data Real-time', desc: 'Mengagregasi data pasar Tionghoa global untuk wawasan bisnis terkini' },
+        { title: 'Analisis Mendalam', desc: 'Menggunakan AI deep learning untuk menganalisis tren dan peluang industri' },
+        { title: 'Multibahasa', desc: 'Beralih mulus antara Mandarin, Inggris, Spanyol, dan Indonesia' },
+        { title: 'Pencarian Global', desc: 'Cari berita, lowongan, properti, dan peluang dengan satu klik' },
+      ],
+      recruiting: {
+        title: 'Dicari Mitra',
+        desc: 'Bergabunglah dengan ekosistem Huashang AI. Klik kotak obrolan untuk menanyakan detail kemitraan.',
+      },
+      footer: 'Konsultasi AI Aman & Pribadi · Ekosistem Huashang AI',
     },
     chat: {
       welcome: 'Halo! Saya Navigator AI Huashang. Ada yang bisa saya bantu? Saya dapat memandu Anda ke bagian Berita, Lowongan, Properti, atau Bisnis.',
       placeholder: 'Tanya tentang bisnis, lowongan, atau properti...',
       thinking: 'Berpikir...',
       error: 'Maaf, karena volume tinggi, otak saya kewalahan. Silakan coba lagi nanti.',
-      header: {
-        title: 'Navigator AI Huashang',
-        status: 'Online · Dukungan Global',
-      }
+      title: 'Navigator AI Huashang',
+      status: 'Online · Dukungan Global',
     }
   },
 };

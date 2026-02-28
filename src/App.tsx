@@ -33,6 +33,7 @@ import {
 } from 'lucide-react';
 import { geminiService } from './services/geminiService';
 import { useTranslation } from './hooks/useTranslation';
+import { Ecosystem } from './components/Ecosystem';
 
 const NavItem = ({ href, children, onClick }: { href: string; children: React.ReactNode; onClick?: () => void }) => (
   <a 
@@ -105,6 +106,7 @@ export default function App() {
   const [scrolled, setScrolled] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [showAIDetail, setShowAIDetail] = useState(false);
+  const [showEcosystem, setShowEcosystem] = useState(false);
   const [chatMessage, setChatMessage] = useState('');
   const [chatHistory, setChatHistory] = useState<{ role: 'user' | 'ai', text: string }[]>([
     { role: 'ai', text: t.chat.welcome }
@@ -249,10 +251,7 @@ export default function App() {
 
             <div className="flex flex-col sm:flex-row gap-6">
               <button 
-                onClick={() => {
-                  const el = document.getElementById('ecosystem');
-                  el?.scrollIntoView({ behavior: 'smooth' });
-                }}
+                onClick={() => setShowEcosystem(true)}
                 className="px-10 py-5 bg-cyan-500 text-black font-black rounded-2xl flex items-center justify-center gap-3 hover:scale-105 transition-transform"
               >
                 {t.hero.cta.explore} <ArrowRight className="w-5 h-5" />
@@ -624,6 +623,35 @@ export default function App() {
           )}
         </AnimatePresence>
       </div>
+
+      {/* Ecosystem Full View */}
+      <AnimatePresence>
+        {showEcosystem && (
+          <motion.div
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{ type: 'tween', duration: 0.35 }}
+            className="fixed inset-0 z-[90] bg-black overflow-y-auto"
+          >
+            <Ecosystem
+              t={t}
+              onBack={() => setShowEcosystem(false)}
+              chatHistory={chatHistory}
+              onSendMessage={(msg) => {
+                setChatHistory(prev => [...prev, { role: 'user', text: msg }]);
+                setIsTyping(true);
+                geminiService.sendMessage(msg).then((response) => {
+                  setChatHistory(prev => [...prev, { role: 'ai', text: response }]);
+                }).catch(() => {
+                  setChatHistory(prev => [...prev, { role: 'ai', text: t.chat.error }]);
+                }).finally(() => setIsTyping(false));
+              }}
+              isTyping={isTyping}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
