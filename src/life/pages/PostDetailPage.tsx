@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { supabase, Post, CATEGORIES, REGIONS } from '../../lib/supabase';
+import { supabase, supabaseConfigured, Post, CATEGORIES, REGIONS } from '../../lib/supabase';
 import { LifeNav } from '../components/LifeNav';
 import { Loader2, Phone, Clock, Tag, MapPin } from 'lucide-react';
 
@@ -14,15 +14,21 @@ export const PostDetailPage: React.FC = () => {
     if (!id) return;
     (async () => {
       setLoading(true);
-      const { data, error: err } = await supabase
-        .from('posts')
-        .select('*')
-        .eq('id', id)
-        .eq('status', 'approved')
-        .single();
-      if (err) setError(err.message);
-      else setPost(data as Post);
-      setLoading(false);
+      try {
+        if (!supabaseConfigured) throw new Error('数据库未配置，请联系管理员');
+        const { data, error: err } = await supabase
+          .from('posts')
+          .select('*')
+          .eq('id', id)
+          .eq('status', 'approved')
+          .single();
+        if (err) setError(err.message);
+        else setPost(data as Post);
+      } catch (e: any) {
+        setError(e.message ?? '加载失败');
+      } finally {
+        setLoading(false);
+      }
     })();
   }, [id]);
 

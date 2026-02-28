@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { supabase, REGIONS, Post } from '../../lib/supabase';
+import { supabase, supabaseConfigured, REGIONS, Post } from '../../lib/supabase';
 import { LifeNav } from '../components/LifeNav';
 import { CategoryNav } from '../components/CategoryNav';
 import { SearchBar } from '../components/SearchBar';
@@ -22,6 +22,7 @@ export const RegionPage: React.FC = () => {
     setLoading(true);
     setError(null);
     try {
+      if (!supabaseConfigured) throw new Error('数据库未配置，请联系管理员');
       let q = supabase
         .from('posts')
         .select('*')
