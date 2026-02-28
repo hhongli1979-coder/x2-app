@@ -31,6 +31,7 @@ import {
   Github,
   Youtube
 } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import { geminiService } from './services/geminiService';
 import { useTranslation } from './hooks/useTranslation';
 
@@ -624,6 +625,7 @@ export default function App() {
           )}
         </AnimatePresence>
       </div>
+      <Analytics />
     </div>
   );
 }
