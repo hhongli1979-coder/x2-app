@@ -52,7 +52,7 @@ alter table public.admins enable row level security;
 -- helper: is the current user an admin?
 create or replace function public.is_admin()
 returns boolean language sql security definer as $$
-  select exists (
+  select auth.uid() is not null and exists (
     select 1 from public.admins where user_id = auth.uid()
   );
 $$;

@@ -28,6 +28,8 @@ export const AdminPage: React.FC = () => {
   const [filter, setFilter] = useState<PostStatus | 'all'>('pending');
   const [updating, setUpdating] = useState<string | null>(null);
 
+  const [opError, setOpError] = useState<string | null>(null);
+
   const fetchPosts = useCallback(async () => {
     setLoading(true);
     let q = supabase
@@ -56,7 +58,9 @@ export const AdminPage: React.FC = () => {
 
   const updatePost = async (id: string, patch: Partial<Post>) => {
     setUpdating(id);
-    await supabase.from('posts').update(patch).eq('id', id);
+    setOpError(null);
+    const { error: err } = await supabase.from('posts').update(patch).eq('id', id);
+    if (err) setOpError(`操作失败: ${err.message}`);
     await fetchPosts();
     setUpdating(null);
   };
@@ -64,7 +68,9 @@ export const AdminPage: React.FC = () => {
   const deletePost = async (id: string) => {
     if (!confirm('确定删除这条帖子？')) return;
     setUpdating(id);
-    await supabase.from('posts').delete().eq('id', id);
+    setOpError(null);
+    const { error: err } = await supabase.from('posts').delete().eq('id', id);
+    if (err) setOpError(`删除失败: ${err.message}`);
     await fetchPosts();
     setUpdating(null);
   };
@@ -119,6 +125,11 @@ export const AdminPage: React.FC = () => {
       </header>
 
       <div className="max-w-3xl mx-auto px-4 py-4 space-y-4">
+        {opError && (
+          <div className="px-4 py-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-sm">
+            {opError}
+          </div>
+        )}
         {/* Filter tabs */}
         <div className="flex gap-2 overflow-x-auto pb-1">
           {(['pending', 'approved', 'rejected', 'hidden', 'all'] as const).map(s => (

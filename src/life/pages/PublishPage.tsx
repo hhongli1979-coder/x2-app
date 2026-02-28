@@ -34,7 +34,11 @@ export const PublishPage: React.FC = () => {
     });
     setSubmitting(false);
     if (err) {
-      setError(err.message);
+      // Map common errors to user-friendly Chinese messages
+      const msg = err.message?.includes('violates') 
+        ? '提交失败，请检查填写内容是否完整'
+        : `提交失败: ${err.message}`;
+      setError(msg);
     } else {
       setDone(true);
     }

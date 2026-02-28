@@ -32,7 +32,11 @@ export const RegionPage: React.FC = () => {
 
       if (category) q = q.eq('category', category);
       if (query.trim()) {
-        q = q.or(`title.ilike.%${query.trim()}%,content.ilike.%${query.trim()}%`);
+        // Escape backslash first, then PostgREST ilike special chars
+        const safe = query.trim()
+          .replace(/\\/g, '\\\\')
+          .replace(/[%_]/g, '\\$&');
+        q = q.or(`title.ilike.%${safe}%,content.ilike.%${safe}%`);
       }
 
       const { data, error: err } = await q;
